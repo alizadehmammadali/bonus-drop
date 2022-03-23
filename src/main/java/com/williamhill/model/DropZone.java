@@ -1,9 +1,9 @@
 package com.williamhill.model;
 
 public class DropZone implements Comparable<DropZone> {
-    BonusPlayResult bonusPlayResult;
-    int count;
-    Counter counter;
+    private BonusPlayResult bonusPlayResult;
+    private int count;
+    private Counter counter;
 
     public DropZone(Counter counter, BonusPlayResult bonusPlayResult) {
         this.counter = counter;

@@ -38,11 +38,11 @@ public class BonusDropEngineImpl implements BonusDropEngine {
 
     @Override
     public BonusPlayResult calculateBonus(PlayerChoice choice) {
-        Queue<DropZone> dropZone = dropZoneMap.get(choice);
-        DropZone peek = dropZone.poll();
-        peek.drop();
-        dropZone.add(peek);
-        return peek.getBonusPlayResult();
+        Queue<DropZone> dropZoneQueue = dropZoneMap.get(choice);
+        DropZone dropZone = dropZoneQueue.poll();
+        dropZone.drop();
+        dropZoneQueue.add(dropZone);
+        return dropZone.getBonusPlayResult();
     }
 
 }

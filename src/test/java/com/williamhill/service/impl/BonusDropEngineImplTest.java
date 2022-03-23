@@ -28,6 +28,7 @@ class BonusDropEngineImplTest {
         long bonusCount = results.stream().filter(bonusPlayResult -> bonusPlayResult instanceof Bonus).count();
         long noBonusCount = results.stream().filter(bonusPlayResult -> bonusPlayResult instanceof NoBonus).count();
         long replayCount = results.stream().filter(bonusPlayResult -> bonusPlayResult instanceof Replay).count();
+
         assertEquals(38, bonusCount);
         assertEquals(40, noBonusCount);
         assertEquals(22, replayCount);
